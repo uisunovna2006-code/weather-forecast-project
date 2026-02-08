@@ -24,6 +24,19 @@ app.use("/api/weather", weatherRoutes);
 // фронтенд как статика (чтобы было “website”)
 app.use(express.static(require("path").join(__dirname, "../../frontend")));
 
+app.get("/", (req, res) => {
+  res.json({
+    message: "Weather Forecast API is running ",
+    endpoints: {
+      auth: "/api/auth",
+      users: "/api/users",
+      weather: "/api/weather",
+      resources: "/api/resource"
+    }
+  });
+});
+
+
 app.use(notFound);
 app.use(errorHandler);
 
