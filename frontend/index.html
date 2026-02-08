@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Forecast</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Weather Forecast</h1>
+
+    <div class="card">
+      <h2>1) Register / Login</h2>
+
+      <div class="grid">
+        <!-- Register -->
+        <div>
+          <h3>Register</h3>
+          <input id="r_username" placeholder="username" />
+          <input id="r_email" placeholder="email" />
+          <input id="r_password" placeholder="password" type="password" />
+          <button id="btnRegister">Register</button>
+        </div>
+
+        <!-- Login -->
+        <div>
+          <h3>Login</h3>
+          <input id="l_email" placeholder="email" />
+          <input id="l_password" placeholder="password" type="password" />
+          <button id="btnLogin">Login</button>
+        </div>
+      </div>
+
+      <!-- Auth actions -->
+      <div style="margin-top: 12px;">
+        <button id="btnProfile">Get Profile</button>
+        <button id="btnLogout" class="logout">Logout</button>
+      </div>
+
+      <p class="muted">Token: <span id="tokenText">none</span></p>
+      <pre id="profileOut"></pre>
+    </div>
+
+    <div class="card">
+      <h2>2) Weather by City (private)</h2>
+      <input id="cityInput" placeholder="e.g., Almaty" />
+      <button id="btnWeather">Get Weather</button>
+      <pre id="weatherOut"></pre>
+    </div>
+
+    <div class="card">
+      <h2>3) Saved Locations (CRUD: /api/resource)</h2>
+
+      <div class="row">
+        <input id="locName" placeholder="Location name (e.g., Astana)" />
+        <input id="locCountry" placeholder="Country (optional)" />
+        <input id="locNotes" placeholder="Notes (optional)" />
+        <button id="btnAddLocation">Add</button>
+      </div>
+
+      <button id="btnLoadLocations">Load My Locations</button>
+      <pre id="locationsOut"></pre>
+    </div>
+
+    <p class="footer">Backend + Frontend in one project</p>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

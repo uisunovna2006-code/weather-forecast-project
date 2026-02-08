@@ -22,7 +22,7 @@ app.use("/api/resource", locationRoutes); // важно: как в требов�
 app.use("/api/weather", weatherRoutes);
 
 // фронтенд как статика (чтобы было “website”)
-app.use(express.static(require("path").join(__dirname, "../../frontend")));
+app.use(express.static(require("path").join(__dirname, "../frontend")));
 
 app.get("/", (req, res) => {
   res.json({
